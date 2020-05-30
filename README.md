@@ -1,4 +1,5 @@
-# CADIO[CatAspectDependencyInjection-Oriented]:고양이 관점 의존주입 지향
+# CADIO[CatAspectDependencyInjection-Oriented]
+#{고양이 관점 의존주입 지향}
 ==========================================================================
 ### 1.소개 
 >회사 동료인 장두석과 같이 공부하기 위해 진행되는 프로젝트이며,
