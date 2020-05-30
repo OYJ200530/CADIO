@@ -6,7 +6,4 @@
 >목적은 고양이와 관련된 커뮤니티가 중점이며 커뮤니티 활동을 하면서 모이는 포인트로 소소한
 >고양이 용품을 살수있는 사이트다.
 ### 2.개발환경
->DIE : STS3
->DevelopLanguage : JAVA(jdk1.8 version)
->View : jsp
->
+
