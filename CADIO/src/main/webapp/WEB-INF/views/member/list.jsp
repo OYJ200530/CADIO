@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<H1>TEST</H1>
-</body>
-</html>
+<h1>${requestScope.list }</h1> 
+</body> 
+</html> 
