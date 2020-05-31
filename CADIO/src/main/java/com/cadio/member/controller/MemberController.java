@@ -12,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.cadio.common.namespace.ControllerNS;
 import com.cadio.common.namespace.ServiceNS;
 import com.cadio.common.service.Services;
+import com.cadio.member.model.MemberDTO;
 
 @Controller
 @RequestMapping(path = ControllerNS.MEMBER)
@@ -22,9 +23,6 @@ public class MemberController {
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public ModelAndView list(ModelAndView mv) throws Exception {
 		mv.setViewName("/member/list");
-		System.out.println(service); 
-		mv.addObject("list", service.allList());
-		service.register(new String());
  		return mv; 
 	}
 }

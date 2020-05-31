@@ -3,4 +3,18 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="member">
+	<select id="list" resultType="com.cadio.member.model.MemberDTO">
+	</select>
+	
+	<insert id="create" parameterType="com.cadio.member.model.MemberDTO">
+	</insert>
+	
+	<update id="update" parameterType="com.cadio.member.model.MemberDTO">
+	</update>
+	 
+	<delete id="delete" parameterType="com.cadio.member.model.MemberDTO">
+	</delete>
+	
+	<select id="read" resultType="com.cadio.member.model.MemberDTO">
+	</select>
 </mapper>

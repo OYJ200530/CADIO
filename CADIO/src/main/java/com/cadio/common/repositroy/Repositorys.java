@@ -1,43 +1,47 @@
 package com.cadio.common.repositroy;
 
-import java.util.Arrays;
 import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.apache.ibatis.session.SqlSession;
 
 
 public abstract class Repositorys implements CRUDRepository,SearchRepository{
- 
+	@Resource(name = "sqlSession")
+	private SqlSession sqlSession;
+	
 	protected String ns;
-
 	
 	@Override
-	public List<Object> searchList(Object obj) throws Exception {
-		return Arrays.asList("TEST","S","D"); 
+	public List<Object> searchList(Object dto) throws Exception {
+		return sqlSession.selectList(ns, dto); 
 	}
  
 	@Override
 	public Integer create(Object dto) throws Exception {
-		return null;
+		return sqlSession.insert(ns, dto);
 	}
 
 	@Override
 	public Object read(Object dto) throws Exception {
-		return null;
+		return sqlSession.selectOne(ns, dto);
 	}
 
 	@Override
 	public Integer update(Object dto) throws Exception {
-		return null;
+		return sqlSession.update(ns, dto);
 	}
 
 	@Override
 	public Integer delete(Object dto) throws Exception {
-		return null;
-	}
+		return sqlSession.delete(ns,dto);
+	}  
 
 	@Override
 	public List<Object> list() throws Exception {
-		return Arrays.asList("TEST","S","D");
+		return sqlSession.selectList(ns);
 	}
-	
+	 
 	protected abstract void setNameSpace(String queryId);
 }

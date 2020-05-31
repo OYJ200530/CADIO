@@ -2,8 +2,6 @@ package com.cadio.jdbc;
 
 import static org.junit.Assert.assertNotNull;
 
-import java.sql.SQLException;
-
 import javax.annotation.Resource;
 import javax.sql.DataSource;
 
@@ -21,9 +19,9 @@ public class JDBCTest {
 	@Resource(name = "dataSource")
 	private DataSource ds;
 	@Resource(name = "sqlSessionFactory")
-	private SqlSessionFactory sf;
+	private SqlSessionFactory sqlSessionFactory;
 	@Resource(name = "sqlSession")
-	private SqlSession sq;
+	private SqlSession sqlSession;
 	
 	@Test
 	public void testDataSource() {
@@ -32,13 +30,12 @@ public class JDBCTest {
 	
 	@Test
 	public void testSqlSessionFactory() {
-		assertNotNull(sf);
+		assertNotNull(sqlSessionFactory);
 	}
-	
 	
 	@Test
 	public void testSqlSession() {
-		assertNotNull(sq);
+		assertNotNull(sqlSession);
 	}
 	
 }
